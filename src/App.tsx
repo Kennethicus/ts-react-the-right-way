@@ -94,7 +94,7 @@ function App() {
       </UserContextProvider>
 
       <div style={{ marginTop: "40px", textAlign: "left" }}>7</div>
-      <MutableRef />
+      {/* <MutableRef /> */}
 
       <div style={{ marginTop: "40px", textAlign: "left" }}>7</div>
       <Counter message={"Hello TK"} />
