@@ -24,6 +24,8 @@ import MutableRef from "./components/ref/MutableRef";
 
 // ? CLASS
 import Counter from "./components/class/Counter";
+import Private from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
 
 function App() {
   const personName = {
@@ -98,6 +100,9 @@ function App() {
 
       <div style={{ marginTop: "40px", textAlign: "left" }}>7</div>
       <Counter message={"Hello TK"} />
+
+      <div style={{ marginTop: "40px", textAlign: "left" }}>18</div>
+      <Private isLoggedIn={true} component={Profile} />
     </>
   );
 }

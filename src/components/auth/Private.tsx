@@ -1,14 +1,15 @@
-import React from "react";
+import React, { ProfilerProps } from "react";
 import Login from "./Login";
+import { ProfileProps } from "./Profile";
 
 type PrivateProps = {
   isLoggedIn: boolean;
-  Component: React.ComponentType;
+  component: React.ComponentType<ProfileProps>;
 };
 
-const Private = ({ isLoggedIn, Component }) => {
+const Private = ({ isLoggedIn, component: Component }: PrivateProps) => {
   if (isLoggedIn) {
-    return <Component />;
+    return <Component name={"TK"} />;
   } else {
     return <Login />;
   }
