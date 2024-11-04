@@ -26,6 +26,14 @@ import MutableRef from "./components/ref/MutableRef";
 import Counter from "./components/class/Counter";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
+import List from "./components/generics/List";
+import RandomNumber from "./components/restriction/RandomNumber";
+import Toast from "./components/templateLiterals/Toast";
+
+// HTML
+import CustomButton from "./components/html/Button";
+import CustomInput from "./components/html/Input";
+import Text from "./components/polymorphic/Text";
 
 function App() {
   const personName = {
@@ -103,6 +111,40 @@ function App() {
 
       <div style={{ marginTop: "40px", textAlign: "left" }}>18</div>
       <Private isLoggedIn={true} component={Profile} />
+
+      <div style={{ marginTop: "40px", textAlign: "left" }}>19</div>
+      <List
+        items={[
+          { id: 1, name: "Batman" },
+          { id: 2, name: "Superman" },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
+
+      <div style={{ marginTop: "40px", textAlign: "left" }}>19</div>
+      <RandomNumber value={10} isPositive />
+
+      <div style={{ marginTop: "40px", textAlign: "left" }}>19</div>
+      <Toast position="center" />
+
+      <div style={{ marginTop: "40px", textAlign: "left" }}>22</div>
+      <CustomButton variant="primary" onClick={() => console.log("Clicked")}>
+        Primary Button
+      </CustomButton>
+
+      <div style={{ marginTop: "40px", textAlign: "left" }}>22</div>
+      <CustomInput />
+
+      <div style={{ marginTop: "40px", textAlign: "left" }}>24</div>
+      <Text as="h1" size={"lg"}>
+        Heading
+      </Text>
+      <Text as="p" size={"md"}>
+        Paragraph
+      </Text>
+      <Text as="label" htmlFor="someId" size={"sm"} color={"secondary"}>
+        Label
+      </Text>
     </>
   );
 }

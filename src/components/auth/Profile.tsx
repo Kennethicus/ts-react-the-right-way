@@ -1,8 +1,8 @@
-type ProfilePros = {
+export type ProfileProps = {
   name: string;
 };
 
-const Profile = ({ name }: ProfilePros) => {
+const Profile = ({ name }: ProfileProps) => {
   return <div>Profile component: {name}</div>;
 };
 
